@@ -11,6 +11,7 @@
 # groups, but i have later assumed that there are only two groups for ease of 
 # plotting.
 
+library(circular)
 
 # how many treatment groups
 G <- 2 # in this case a treatment and a control
@@ -44,21 +45,21 @@ for (i in 2:G) {
   
   # here i have specified a high concentration value of rho=0.98 to ensure high
   # high precision in the treatment group.
-  a <- circular::rwrappednormal(M,
-                               mu=circular(runif(1,0,2*pi)),
-                               rho=0.93, 
-                               control.circular = list(units="radians"))
+  a <- rwrappednormal(M,
+                      mu=circular(runif(1,0,2*pi)),
+                      rho=0.93, 
+                      control.circular = list(units="radians"))
   
   # this is a bit lazy of me to use sort() to collect the replicated mean terms.
   mu.grp <- sort(rep(a, N)) 
   
   # pull random wrapped normal numbers for each individual with their
   # appropriate unique, individual-level mean value.
-  circ.dat[start.idx:end.idx, 1] <- circular::rwrappednormal(M*N, 
-                                                mu=mu.grp, 
-                                                rho=0.98, 
-                                                control.circular = 
-                                                  list(units="radians"))
+  circ.dat[start.idx:end.idx, 1] <- rwrappednormal(M*N, 
+                                                   mu=mu.grp, 
+                                                   rho=0.98, 
+                                                   control.circular = 
+                                                    list(units="radians"))
 }
 
 
