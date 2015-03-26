@@ -9,8 +9,8 @@ Bayesian circular linear models with random effects. Development of code to fit 
 More information at [wikipedia](http://en.wikipedia.org/wiki/Von_Mises_distribution) where i took the following useful information on the parameters:
 * μ is a measure of location (the distribution is clustered around μ), and
 * κ is a measure of concentration (a reciprocal measure of dispersion, so 1/κ is analogous to σ2).
-** If κ is zero, the distribution is uniform, and for small κ, it is close to uniform. I understand this as corresponding to the null hypothesis of complete random choice in direction between trials.
-** If κ is large, the distribution becomes very concentrated about the angle μ with κ being a measure of the concentration. In fact, as κ increases, the distribution approaches a normal distribution in x  with mean μ and variance 1/κ.
+..* If κ is zero, the distribution is uniform, and for small κ, it is close to uniform. I understand this as corresponding to the null hypothesis of complete random choice in direction between trials.
+..* If κ is large, the distribution becomes very concentrated about the angle μ with κ being a measure of the concentration. In fact, as κ increases, the distribution approaches a normal distribution in x  with mean μ and variance 1/κ.
 
 
 ## Collaborators
