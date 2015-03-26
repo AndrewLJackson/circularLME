@@ -3,8 +3,8 @@ Bayesian circular linear models with random effects. Development of code to fit 
 
 ## Progress
 * I currently have a script to generate a hierarchical structure of data, with a treatment group, and a control, for repeated measures on a number of individuals.
-* I have a STAN model set up to fit a very basic von Mises model (implemented in 'one_group_von_mises.R') to some circular data comprising a number of independent observations comprising a single group. This is very capable of estimating the two parameters mu and kappa of the von Mises distribution (see notes below).
-* I have a STAN model to compare mean (accuracy) and concentration (precision) between two treatment groups (implemented in 'two_groups_von_mises.R').
+* I have a STAN model set up to fit a very basic von Mises model (implemented in `one_group_von_mises.R`) to some circular data comprising a number of independent observations comprising a single group. This is very capable of estimating the two parameters mu and kappa of the von Mises distribution (see notes below).
+* I have a STAN model to compare mean (accuracy) and concentration (precision) between two treatment groups (implemented in `two_groups_von_mises.R`).
 * Next steps are:
   * implement a random effect term in the single group situation.
     * ? should the random effects manifest on both μ and κ?
